@@ -1,5 +1,5 @@
 # Githunter
-Link: https://githunter.netlify.app/
+[Acesse o projeto!] (https://githunter.netlify.app/)
 
 ## Projeto Desenvolvido com React, com objetivo de aprimorar meu conhecimento!
 ## ela busca na API do Github o usaurio que você pesquisou
