@@ -1,5 +1,5 @@
 # Githunter
-![Acesse o projeto!](https://githunter.netlify.app/)
+<a href="https://githunter.netlify.app/">Acesse o site!</a>
 
 ## Projeto Desenvolvido com React, com objetivo de aprimorar meu conhecimento!
 ## ela busca na API do Github o usaurio que você pesquisou
