@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { githubApi } from '../../services/api';
 import UserCard from '../UserCard';
 import { Container } from './styles';
@@ -10,9 +10,9 @@ interface UserProps {
 }
 const NewUsers: React.FC = () => {
   const [usersList, setUsersList] = useState<UserProps[]>([]);
-  const [randomNumber, setRandomNumber] = useState(() => {
+  const randomNumber = useCallback(() => {
     return Math.floor(Math.random() * 33429773);
-  });
+  }, []);
 
   useEffect(() => {
     async function getListUser() {

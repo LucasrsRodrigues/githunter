@@ -1,5 +1,4 @@
 import React, { useCallback, FormEvent, useState } from 'react';
-import { BsHeartFill } from 'react-icons/bs';
 import { FiSearch } from 'react-icons/fi';
 import { Link, useHistory } from 'react-router-dom';
 import { Container, InputContainer, Form } from './styles';

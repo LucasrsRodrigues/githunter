@@ -10,7 +10,6 @@ import Footer from '../../components/Footer';
 import LoadingProfile from '../../components/Shimmer/LoadingProfile';
 import LoadRepository from '../../components/Shimmer/LoadRepository';
 import NewUsers from '../../components/NewUsers';
-import LoadingPagination from '../../components/Shimmer/LoadingPagination';
 
 interface HomeParams {
   name: string;

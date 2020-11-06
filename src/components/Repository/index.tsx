@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { Container } from './styles';
-import LoadRepository from '../Shimmer/LoadRepository';
 
 interface RepositoryProps {
   owner_name: string;
