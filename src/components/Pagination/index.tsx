@@ -19,7 +19,7 @@ interface Repos {
   name: string;
   full_name: string;
   description?: string;
-  url: string;
+  html_url: string;
   forks: number;
 }
 interface HomeParams {
@@ -43,7 +43,6 @@ const Pagination: React.FC = () => {
 
       const response = await githubApi.get(
         `/users/${params.name}/repos?page=${currentPage}&per_page=${limit}`,
-        // `/users/lucasrsrodrigues/repos?per_page=${limit}`,
       );
 
       const totalPages = Math.ceil(total / limit);
@@ -134,6 +133,7 @@ const Pagination: React.FC = () => {
                 key={repository.id}
                 owner_name={params.name}
                 repository_name={repository.name}
+                html_url={repository.html_url}
               />
             ))}
           </div>
