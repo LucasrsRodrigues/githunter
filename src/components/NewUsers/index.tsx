@@ -10,6 +10,7 @@ interface UserProps {
 }
 const NewUsers: React.FC = () => {
   const [usersList, setUsersList] = useState<UserProps[]>([]);
+
   const randomNumber = useCallback(() => {
     return Math.floor(Math.random() * 33429773);
   }, []);

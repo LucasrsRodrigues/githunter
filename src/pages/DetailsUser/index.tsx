@@ -27,6 +27,7 @@ const DetailsUser: React.FC = () => {
 
   const [user, setUser] = useState<UserProps>({} as UserProps);
   const [loading, setIsLoading] = useState(true);
+
   useEffect(() => {
     githubApi.get(`users/${params.name}`).then(response => {
       setUser(response.data);
@@ -36,6 +37,7 @@ const DetailsUser: React.FC = () => {
       }, 2000);
     });
   }, [params.name]);
+
   return (
     <Container>
       <Header />
