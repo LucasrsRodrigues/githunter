@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useRouteMatch } from 'react-router-dom';
 
-import { Container, Content } from './styles';
+import * as S from './styles';
 import { githubApi } from '../../services/api';
 
-import Header from '../../components/Header';
 import Pagination from '../../components/Pagination';
 import LoadingProfile from '../../components/Shimmer/LoadingProfile';
 import LoadRepository from '../../components/Shimmer/LoadRepository';
 import NewUsers from '../../components/NewUsers';
+import Sidebar from '../../components/Sidebar';
 
 interface HomeParams {
   name: string;
@@ -39,8 +39,8 @@ const DetailsUser: React.FC = () => {
   }, [params.name]);
 
   return (
-    <Container>
-      <Header />
+    <S.Container>
+      <Sidebar />
       <main>
         {loading ? (
           <LoadingProfile />
@@ -59,7 +59,7 @@ const DetailsUser: React.FC = () => {
           </aside>
         )}
 
-        <Content>
+        <S.Content>
           <section className="statistic">
             <h1>Estatística</h1>
             {loading ? (
@@ -78,9 +78,9 @@ const DetailsUser: React.FC = () => {
             <Pagination />
           </section>
           <NewUsers />
-        </Content>
+        </S.Content>
       </main>
-    </Container>
+    </S.Container>
   );
 };
 

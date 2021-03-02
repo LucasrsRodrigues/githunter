@@ -8,8 +8,20 @@ export const Container = styled.div`
     }
 
     .section-content {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      grid-auto-flow: row;
+
+      @media (max-width: 850px) {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+      }
+
+      @media (max-width: 574px) {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+      }
     }
   }
 `;

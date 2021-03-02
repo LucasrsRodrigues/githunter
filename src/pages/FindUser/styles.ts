@@ -12,6 +12,7 @@ export const Container = styled.div`
   height: 100vh;
 
   background: url(${githubBackground}) no-repeat 70% top;
+
   main {
     flex: 1;
     max-width: 960px;

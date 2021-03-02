@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
-import { Link, useRouteMatch } from 'react-router-dom';
+import { Link, useHistory, useRouteMatch } from 'react-router-dom';
 import Sidebar from '../../components/Sidebar';
 import { githubApi } from '../../services/api';
 
@@ -33,7 +33,6 @@ interface Issue {
 const Repository: React.FC = () => {
   const [repository, setRepository] = useState<Repository | null>(null);
   const [issues, setIssues] = useState<Issue[]>([]);
-
   const { params } = useRouteMatch<RepositoryParams>();
 
   useEffect(() => {
@@ -55,7 +54,7 @@ const Repository: React.FC = () => {
       <Sidebar />
       <main>
         <div className="header">
-          <Link to="/dashboard">
+          <Link to="/users">
             <FiChevronLeft size={16} />
             Voltar
           </Link>

@@ -19,7 +19,6 @@ interface Repos {
   name: string;
   full_name: string;
   description?: string;
-  html_url: string;
   forks: number;
 }
 interface HomeParams {
@@ -47,6 +46,7 @@ const Pagination: React.FC = () => {
 
       const totalPages = Math.ceil(total / limit);
       const arrayPages = [];
+
       // eslint-disable-next-line no-plusplus
       for (let i = 1; i <= totalPages; i++) {
         arrayPages.push(i);
@@ -133,7 +133,7 @@ const Pagination: React.FC = () => {
                 key={repository.id}
                 owner_name={params.name}
                 repository_name={repository.name}
-                html_url={repository.html_url}
+                full_name={repository.full_name}
               />
             ))}
           </div>

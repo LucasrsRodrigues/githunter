@@ -12,13 +12,16 @@ const NewUsers: React.FC = () => {
   const [usersList, setUsersList] = useState<UserProps[]>([]);
 
   const randomNumber = useCallback(() => {
-    return Math.floor(Math.random() * 33429773);
+    const random = Math.floor(Math.random() * 33429773);
+
+    return random;
   }, []);
 
   useEffect(() => {
     async function getListUser() {
+      const users = randomNumber();
       const response = await githubApi.get(
-        `https://api.github.com/users?since=${randomNumber}&per_page=3`,
+        `https://api.github.com/users?since=${users}&per_page=3`,
       );
 
       setUsersList(response.data);

@@ -1,12 +1,21 @@
 import styled from 'styled-components';
+import githubBackground from '../../assets/github.svg';
 
 export const Container = styled.div`
+  display: flex;
+  height: 100vh;
+
+  background: url(${githubBackground}) no-repeat 70% top;
+
   main {
-    margin-top: 35px;
+    flex: 1;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 20px;
     display: flex;
-    padding: 0 50px;
 
     aside {
+      margin: 30px 40px 30px;
       width: 100%;
       max-width: 400px;
 
