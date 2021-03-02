@@ -8,21 +8,6 @@ export const Container = styled.header`
   display: flex;
   align-items: center;
 
-  .logo {
-    a {
-      display: block;
-      font-size: 25px;
-      font-weight: 500;
-      color: #8e72dc;
-      text-decoration: none;
-      transition: color 0.3s;
-
-      &:hover {
-        color: ${shade(0.2, '#8e72dc')};
-      }
-    }
-  }
-
   .search {
     width: 100%;
     max-width: 800px;

@@ -6,7 +6,6 @@ import { githubApi } from '../../services/api';
 
 import Header from '../../components/Header';
 import Pagination from '../../components/Pagination';
-import Footer from '../../components/Footer';
 import LoadingProfile from '../../components/Shimmer/LoadingProfile';
 import LoadRepository from '../../components/Shimmer/LoadRepository';
 import NewUsers from '../../components/NewUsers';
@@ -23,7 +22,7 @@ interface UserProps {
   html_url: string;
 }
 
-const Details: React.FC = () => {
+const DetailsUser: React.FC = () => {
   const { params } = useRouteMatch<HomeParams>();
 
   const [user, setUser] = useState<UserProps>({} as UserProps);
@@ -79,9 +78,8 @@ const Details: React.FC = () => {
           <NewUsers />
         </Content>
       </main>
-      {!loading && <Footer />}
     </Container>
   );
 };
 
-export default Details;
+export default DetailsUser;

@@ -1,3 +1,4 @@
+import { shade } from 'polished';
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
@@ -6,6 +7,7 @@ export default createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     outline: none;
+    -webkit-font-smoothing: antialiased;
   }
   ::-webkit-scrollbar {
     width: 12px;
@@ -25,8 +27,7 @@ export default createGlobalStyle`
   }
 
   body, input, button {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font: 16px Roboto, sans-serif;
   }
 
   h1,h2,h3,h4,h5,h5, strong {
@@ -35,5 +36,20 @@ export default createGlobalStyle`
 
   button {
     cursor: pointer;
+  }
+
+  .logo {
+    a {
+      display: block;
+      font-size: 25px;
+      font-weight: 500;
+      color: #8e72dc;
+      text-decoration: none;
+      transition: color 0.3s;
+
+      &:hover {
+        color: ${shade(0.2, '#8e72dc')};
+      }
+    }
   }
 `;
