@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
-import { Link, useHistory, useRouteMatch } from 'react-router-dom';
+import { Link, useRouteMatch } from 'react-router-dom';
 import Sidebar from '../../components/Sidebar';
 import { githubApi } from '../../services/api';
 
