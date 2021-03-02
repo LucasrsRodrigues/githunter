@@ -78,4 +78,8 @@ export const Error = styled.span``;
 export const Users = styled.section`
   margin-top: 80px;
   max-width: 700px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
 `;
