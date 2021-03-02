@@ -1,5 +1,4 @@
 import React, { FormEvent, useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
 import Sidebar from '../../components/Sidebar';
 import UserCard from '../../components/UserCard';
 import { githubApi } from '../../services/api';
