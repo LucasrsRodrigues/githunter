@@ -20,7 +20,7 @@ export default createGlobalStyle`
       background: rgba(97, 218, 251, .2);
   }
   body {
-    background: #f3f2ef;
+    background: #f0f0f5;
     color: #434343;
     -webkit-font-smoothing: antialiased;
 

@@ -10,8 +10,8 @@ interface FormProps {
 export const Container = styled.div`
   display: flex;
   height: 100vh;
-  background: #f0f0f5 url(${githubBackground}) no-repeat 70% top;
 
+  background: url(${githubBackground}) no-repeat 70% top;
   main {
     flex: 1;
     max-width: 960px;
@@ -80,6 +80,17 @@ export const Users = styled.section`
   max-width: 700px;
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  grid-auto-flow: row;
+
+  @media (max-width: 850px) {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+  @media (max-width: 574px) {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
 `;
